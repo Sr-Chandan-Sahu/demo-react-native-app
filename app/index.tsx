@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, SafeAreaView, } from 'react-native';
+import { View, Text, FlatList, SafeAreaView, Pressable, TouchableOpacity, } from 'react-native';
 import data from '@/assets/data.json';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -46,7 +46,7 @@ const App: React.FC = () => {
   }
 
   const renderPortfolioItem = ({ item }: { item: PortfolioItem }) => (
-    <View
+    <TouchableOpacity
       key={item.name}
       className='flex-col justify-between items-center bg-white p-4 mb-2 rounded-lg shadow'
       style={{ marginRight: 12 }}
@@ -64,11 +64,11 @@ const App: React.FC = () => {
           <Text className='text-green-500 font-bold'>+${item.earnings.toLocaleString()}</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   const renderWatchlistItem = ({ item }: { item: WatchlistItem }) => (
-    <View className='flex-row justify-between items-center bg-white p-4 mb-2 rounded-lg shadow'>
+    <TouchableOpacity className='flex-row justify-between items-center bg-white p-4 mb-2 rounded-lg shadow'>
       <View>
         <Text className='text-lg font-bold'>{item.symbol}</Text>
         <Text className='text-gray-500'>{item.name}</Text>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
           {item.change > 0 ? `+${item.change}` : item.change} ({item.percentChange}%)
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -93,7 +93,7 @@ const App: React.FC = () => {
             <Text className='text-black text-sm'>{userData.user.role}</Text>
           </View>
         </View>
-        <Ionicons name="notifications-outline" size={24} color="black" />
+        <TouchableOpacity><Ionicons name="notifications-outline" size={24} color="black" /></TouchableOpacity>
       </View>
       <FlatList
         data={[1]}
@@ -131,7 +131,7 @@ const App: React.FC = () => {
           </>
         )}
       />
-    <StatusBar style='dark'/>
+      <StatusBar style='dark' />
     </SafeAreaView>
   );
 };
