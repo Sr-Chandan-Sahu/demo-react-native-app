@@ -1,0 +1,50 @@
+{
+    "user": {
+      "name": "Shah Omar",
+      "role": "Star Investor",
+      "totalValue": 100086.00
+    },
+    "portfolio": [
+      {
+        "name": "Haj Fund",
+        "balance": 15145,
+        "earnings": 2195.3
+      },
+      {
+        "name": "Marriage Fund",
+        "balance": 28268.5,
+        "earnings": 1582.4
+      }
+    ],
+    "watchlist": [
+      {
+        "symbol": "DMEST",
+        "name": "Doninvest Money Market",
+        "price": 2920.16,
+        "change": 90,
+        "percentChange": 25.6
+      },
+      {
+        "symbol": "JRDC",
+        "name": "Just A Random Company",
+        "price": 1945,
+        "change": -5,
+        "percentChange": -1.6
+      },
+      {
+        "symbol": "BRCO",
+        "name": "The Brother Co",
+        "price": 2016.5,
+        "change": 10,
+        "percentChange": 15.4
+      },
+      {
+        "symbol": "DULV",
+        "name": "The Brother Co",
+        "price": 2920.16,
+        "change": -5,
+        "percentChange": -1.6
+      }
+    ]
+  }
+  
